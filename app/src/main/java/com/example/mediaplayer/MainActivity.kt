@@ -36,6 +36,11 @@ class MainActivity : AppCompatActivity() {
                 mpsound = MediaPlayer.create(this, R.raw.klavier)
                 mpsound.start()
                 vwplayer.setVideoPath(videopath)
+                vwplayer.setOnCompletionListener {v ->run {
+                    vwplayer.start()
+                }
+
+                }
                 vwplayer.start()
             }
 
